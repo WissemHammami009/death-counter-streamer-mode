@@ -25,7 +25,7 @@ A lightweight **OBS browser-source death counter** for streamers with **global h
 Clone the repository or download the latest release.
 
 ```bash
-git clone https://github.com/<your-username>/death-counter-streamer-mode.git
+git clone https://github.com/wissemhammami009/death-counter-streamer-mode.git
 cd death-counter-streamer-mode
 ```
 
@@ -92,6 +92,7 @@ counter.json
 
 Closing and reopening the application preserves the current death count.
 
+
 ---
 
 ## 📁 Project Structure
@@ -109,6 +110,16 @@ death-counter-streamer-mode/
 ├── package.json
 └── README.md
 ```
+
+
+---
+## 📸 Screenshots
+
+<p align="center">
+  <img src="screenshots/image%201.png" alt="Overlay Preview" width="47%">
+  <img src="screenshots/image%20OBS.png" alt="OBS Preview" width="47%">
+</p>
+
 
 ---
 
