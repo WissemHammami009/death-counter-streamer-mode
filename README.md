@@ -1,34 +1,127 @@
 # OBS Death Counter
 
-## Install
+A lightweight **OBS browser-source death counter** for streamers with **global hotkeys**—no browser focus required.
 
-1. Install Node.js.
-2. Open this folder in Command Prompt or PowerShell.
-3. Run:
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
+![OBS](https://img.shields.io/badge/OBS-Browser%20Source-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-   npm install
-   npm start
+---
 
-## Add it to OBS
+## ✨ Features
 
-1. Add a **Browser Source**.
-2. Use this URL:
+- 🎮 Works while your game is focused
+- ⌨️ Global keyboard shortcuts
+- 📺 Real-time updates in OBS
+- 💾 Automatically saves the counter
+- 🎨 Fully customizable HTML/CSS overlay
+- ⚡ Lightweight and easy to set up
 
-   http://127.0.0.1:3000
+---
 
-3. Suggested size: 500 × 160.
-4. Leave the Node.js window running while streaming.
+## 📦 Installation
 
-## Global shortcuts
+Clone the repository or download the latest release.
 
-- `=` or numeric keypad `+`: add one death
-- `-`: remove one death
-- `F10`: reset to zero
+```bash
+git clone https://github.com/<your-username>/death-counter-streamer-mode.git
+cd death-counter-streamer-mode
+```
 
-The counter is stored in `counter.json`, so restarting the program keeps the latest value.
+Install dependencies:
 
-## Game/admin note
+```bash
+npm install
+```
 
-If a game is running as Administrator, Windows may block input hooks from a
-normal process. In that case, launch Command Prompt or PowerShell as
-Administrator before running `npm start`.
+Start the application:
+
+```bash
+npm start
+```
+
+The server will start at:
+
+```
+http://127.0.0.1:3000
+```
+
+---
+
+## 🎥 OBS Setup
+
+1. Open **OBS Studio**
+2. Add a **Browser Source**
+3. Set the URL to:
+
+```
+http://127.0.0.1:3000
+```
+
+Suggested settings:
+
+- Width: **500**
+- Height: **180**
+- FPS: **60**
+
+Leave the Node.js application running while streaming.
+
+---
+
+## ⌨️ Global Hotkeys
+
+| Key | Action |
+|------|--------|
+| `=` | Increase deaths |
+| `Numpad +` | Increase deaths |
+| `-` | Decrease deaths |
+| `F10` | Reset counter |
+
+These shortcuts work **without focusing the browser**, allowing you to update the counter while playing.
+
+---
+
+## 💾 Persistent Storage
+
+The counter is automatically saved to:
+
+```
+counter.json
+```
+
+Closing and reopening the application preserves the current death count.
+
+---
+
+## 📁 Project Structure
+
+```
+death-counter-streamer-mode/
+│
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── server.js
+├── counter.json
+├── package.json
+└── README.md
+```
+
+---
+
+## 🎨 Customization
+
+The overlay is built with standard web technologies.
+
+- Edit **public/style.css** to customize the appearance.
+- Edit **public/index.html** to modify the layout.
+- Edit **public/script.js** to add animations or additional functionality.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
