@@ -1,0 +1,14 @@
+{
+  "name": "obs-death-counter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OBS death counter controlled by global keyboard shortcuts.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "uiohook-napi": "^1.5.5"
+  }
+}
