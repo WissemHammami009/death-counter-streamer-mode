@@ -1,14 +1,21 @@
 {
-  "name": "obs-death-counter",
+  "name": "death-counter-streamer-mode",
   "version": "1.0.0",
   "private": true,
-  "description": "OBS death counter controlled by global keyboard shortcuts.",
   "main": "server.js",
+  "bin": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "pkg . --targets node18-win-x64 --output dist/death-counter.exe"
   },
   "dependencies": {
     "express": "^5.1.0",
     "uiohook-napi": "^1.5.5"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "node_modules/uiohook-napi/**/*"
+    ]
   }
 }

@@ -3,7 +3,6 @@
 A lightweight **OBS browser-source death counter** for streamers with **global hotkeys**—no browser focus required.
 
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue)
-![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
 ![OBS](https://img.shields.io/badge/OBS-Browser%20Source-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
@@ -15,57 +14,47 @@ A lightweight **OBS browser-source death counter** for streamers with **global h
 - ⌨️ Global keyboard shortcuts
 - 📺 Real-time updates in OBS
 - 💾 Automatically saves the counter
+- 🖥️ Standalone Windows executable available
 - 🎨 Fully customizable HTML/CSS overlay
 - ⚡ Lightweight and easy to set up
 
 ---
 
-## 📦 Installation
+## 🚀 Quick Start (Windows)
 
-Clone the repository or download the latest release.
+Download the latest **Death Counter.exe** from the **Releases** page.
 
-```bash
-git clone https://github.com/wissemhammami009/death-counter-streamer-mode.git
-cd death-counter-streamer-mode
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the application:
-
-```bash
-npm start
-```
-
-The server will start at:
+1. Download **Death Counter.exe** from the latest release.
+2. Launch the executable.
+3. The local server will automatically start.
+4. Open **OBS Studio** and add a **Browser Source**.
+5. Use the following URL:
 
 ```
 http://127.0.0.1:3000
 ```
 
+No installation or Node.js runtime is required.
+
 ---
 
 ## 🎥 OBS Setup
 
-1. Open **OBS Studio**
-2. Add a **Browser Source**
+1. Open **OBS Studio**.
+2. Add a new **Browser Source**.
 3. Set the URL to:
 
 ```
 http://127.0.0.1:3000
 ```
 
-Suggested settings:
+Recommended settings:
 
 - Width: **500**
 - Height: **180**
 - FPS: **60**
 
-Leave the Node.js application running while streaming.
+> **Note:** The application (or `npm start` when running from source) must remain running while using the Browser Source.
 
 ---
 
@@ -78,20 +67,59 @@ Leave the Node.js application running while streaming.
 | `-` | Decrease deaths |
 | `F10` | Reset counter |
 
-These shortcuts work **without focusing the browser**, allowing you to update the counter while playing.
+The hotkeys work globally, allowing you to update the counter while your game remains focused.
 
 ---
 
 ## 💾 Persistent Storage
 
-The counter is automatically saved to:
+The current counter is automatically saved to:
 
 ```
 counter.json
 ```
 
-Closing and reopening the application preserves the current death count.
+When the application is restarted, the previous counter value is restored automatically.
 
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="screenshots/image%201.png" alt="Overlay Preview" width="47%">
+  <img src="screenshots/image%20OBS.png" alt="OBS Preview" width="47%">
+</p>
+
+---
+
+## 🛠️ Development
+
+If you want to modify or contribute to the project:
+
+Clone the repository:
+
+```bash
+git clone https://github.com/wissemhammami009/death-counter-streamer-mode.git
+cd death-counter-streamer-mode
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm start
+```
+
+The local server will be available at:
+
+```
+http://127.0.0.1:3000
+```
 
 ---
 
@@ -105,34 +133,38 @@ death-counter-streamer-mode/
 │   ├── style.css
 │   └── script.js
 │
+├── screenshots/
+│   ├── image 1.png
+│   └── image OBS.png
+│
 ├── server.js
 ├── counter.json
 ├── package.json
+├── LICENSE
 └── README.md
 ```
-
-
----
-## 📸 Screenshots
-
-<p align="center">
-  <img src="screenshots/image%201.png" alt="Overlay Preview" width="47%">
-  <img src="screenshots/image%20OBS.png" alt="OBS Preview" width="47%">
-</p>
-
 
 ---
 
 ## 🎨 Customization
 
-The overlay is built with standard web technologies.
+The overlay is built using standard web technologies.
 
 - Edit **public/style.css** to customize the appearance.
-- Edit **public/index.html** to modify the layout.
+- Edit **public/index.html** to change the layout.
 - Edit **public/script.js** to add animations or additional functionality.
+- Modify **server.js** to customize keyboard shortcuts or application behavior.
+
+---
+
+## 🤝 Contributing
+
+Contributions, feature requests, and bug reports are welcome.
+
+If you have an idea for an improvement, feel free to open an issue or submit a pull request.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
